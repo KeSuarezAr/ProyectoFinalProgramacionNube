@@ -1,0 +1,12 @@
+Apply complete! Resources: 2 added, 1 changed, 2 destroyed.
+
+Outputs:
+
+private_ips = [
+  "10.0.1.242",
+  "10.0.1.101",
+]
+public_ips = [
+  "18.212.154.95",
+  "52.207.231.92",
+]

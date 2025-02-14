@@ -1,0 +1,28 @@
+stages:
+  - init
+  - plan
+  - apply
+
+variables:
+  TF_VAR_region: "us-west-2"
+
+before_script:
+  - apk add --no-cache python3 py3-pip
+  - pip3 install awscli
+  - terraform --version
+
+init:
+  stage: init
+  script:
+    - terraform init
+
+plan:
+  stage: plan
+  script:
+    - terraform plan
+
+apply:
+  stage: apply
+  script:
+    - terraform apply -auto-approve
+  when: manual
